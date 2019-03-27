@@ -29,11 +29,26 @@ def getAttributes(dataFilePath, headersFilePath):
             count=0
     return attributes
 
+#write function to count and store the number of catagories per attribute per class label
+#for each attribute, for each class label, count the number of each catagory
+def makeBigDaddyDict(dataFilePath, headersFilePath):
+    dataTuple=preprocess(dataFilePath, headersFilePath)
+    data=dataTuple[0]
+    attributes=dataTuple[1]
+    catagories=dataTuple[2]
+    bigDaddyDict={}
+    for attribute in attributes[:-1]:
+        for class in catagories[attributes[-1]]:
+            for
+
+
+
+
+    return bigDaddyDict
+
 #dataSet should be a list of lists, where each list is a row
 def train(processedData):
     size = getDimensions()
-
-    #count and store the number of catagories per attribute per class label
 
     return
 
