@@ -38,12 +38,21 @@ def makeBigDaddyDict(dataFilePath, headersFilePath):
     catagories=dataTuple[2]
     bigDaddyDict={}
     for attribute in attributes[:-1]:
-        for class in catagories[attributes[-1]]:
-            for
+        attributeIndex=attributes.index(attribute)
+        bigDaddyDict[attribute] = {}
+        print("----")
+        print(attribute)
+        for catagory in catagories[attribute]:
+            bigDaddyDict[attribute][catagory] = {}
+            print("----")
+            print(catagory)
+            for classCatagory in catagories['class']:
+                print(classCatagory)
+                count=0
+                #TODO: add one to count each time 'catagory' is in the same row as 'classCatagory'
+                attributeIndex=attributes.index(attribute)
 
-
-
-
+                bigDaddyDict[attribute][catagory][classCatagory] = count
     return bigDaddyDict
 
 #dataSet should be a list of lists, where each list is a row
@@ -69,3 +78,5 @@ def getDimensions(arrayOfRows):
 headers=('headers.txt')
 test=preprocess('car.csv', headers)
 print(test[2])
+print("--------------")
+print(makeBigDaddyDict('car.csv', headers))
