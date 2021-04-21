@@ -1,1 +1,1 @@
-#Naive Bayes Classifier
+A naive bayes classifier in python
